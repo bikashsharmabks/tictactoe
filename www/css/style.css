@@ -1,0 +1,82 @@
+.text-center {
+    text-align: center;
+}
+.text-right {
+    text-align: right;
+}
+
+.top20 {
+	padding-top:25vh !important;
+}
+
+.logo {
+	height: 140px;
+	width: 140px;
+}
+
+.btn-group-vertical>.btn, .btn-group-vertical>.btn-group, .btn-group-vertical>.btn-group>.btn {
+    display: block;
+    float: none;
+    width: 100%;
+    max-width: 100%;
+    margin: 10px 0;
+}
+
+.wrapper{
+    margin:0px auto;
+    text-align:center;
+    border:1px solid #ddd;
+    padding:25px;
+    width:414px;
+}
+.action-bar{
+    margin-bottom:10px;
+}
+.status-bar{
+    margin-top:10px;
+    height:25px;
+    line-height:25px;
+    font-weight:bold;
+    border:1px dashed black;
+}
+.board{
+    box-shadow(0 3px 7px rgba(0,0,0,1));
+    border: 1px solid #999;
+    margin:0px auto;
+}
+.t-row{
+    display:table-row;
+}
+.t-col{
+    width:136px;
+    height:136px;
+    display:table-cell;
+    background-color:#ECBAC1;
+    border-bottom:1px solid #999;
+    border-right:1px solid #999;
+    cursor:pointer;
+}
+.t-col .symbol{
+    font-size:84px;
+    line-height: 136px;
+    color:#999;
+}
+.t-col .symbol.won{
+    color:green;
+    animation: shake 400ms ease-in-out;
+}
+@keyframes shake {
+  0% {transform: translateX(0);}
+  12.5% {transform: translateX(-6px) rotateY(-5deg)}
+  37.5% {transform: translateX(5px) rotateY(4deg)}
+  62.5% {transform: translateX(-3px) rotateY(-2deg)}
+  87.5% {transform: translateX(2px) rotateY(1deg)}
+  100% {transform: translateX(0)}
+}
+.t-col:last-child{
+    border-top:0;
+    border-right:0;
+}
+.t-row:last-child > .t-col{
+    border-bottom:0;
+}

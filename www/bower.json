@@ -1,0 +1,12 @@
+{
+  "name": "tictactoe",
+  "version": "1.0.0",
+  "description": "tictactoe build with love using MEAN stack",
+  "dependencies": {
+    "Materialize": "materialize#~0.97.3",
+    "angular": "~1.4.8",
+    "angular-animate": "~1.4.8",
+    "angular-route": "~1.4.8",
+    "angular-ui-router": "~0.2.15"
+  }
+}

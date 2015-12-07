@@ -1,0 +1,17 @@
+<div class="col s12 offset-s4 text-center top20">
+	<h5 class="header">Login</h5>
+	<strong>{{vm.message}}</strong>
+	<div class="row">
+	    <div class="input-field col s12">
+	      <input id="email" type="text" class="validate" ng-model="vm.userName">
+	      <label for="userName">UserName</label>
+	    </div>
+	    <div class="input-field col s12">
+          <input id="password" type="password" class="validate" ng-model="vm.password">
+          <label for="password">Password</label>
+        </div>
+  	</div>
+	<div class="btn-group-vertical">
+	  <a class="waves-effect btn-flat btn red lighten-3" ng-click="vm.start()">Start</a>
+	</div>
+</div>

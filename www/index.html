@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+  <html>
+    <head>
+      <!--Import materialize.css-->
+      <link type="text/css" rel="stylesheet" href="bower_components/Materialize/dist/css/materialize.min.css"  media="screen,projection"/>
+      <link type="text/css" rel="stylesheet" href="/css/style.css"  media="screen,projection"/>
+      <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+      <!-- Fav Icon -->
+      <link href="/img/logo.png" rel="shortcut icon" type="image/x-icon">
+
+      <!--Let browser know website is optimized for mobile-->
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+      <title>Tic Tac Toe</title>
+    </head>
+
+    <body class="red lighten-5" ng-app="tictactoe">
+
+      <div class="container">
+        <div class="row">
+          <div ui-view class="slide"></div>
+        </div>
+      </div>
+      <audio id="x-snd" src="/audio/x.mp3" preload="auto"></audio>
+      <audio id="o-snd" src="/audio/o.mp3" preload="auto"></audio>
+      <!--Import jQuery before materialize.js-->
+      <script type="text/javascript" src="/bower_components/jquery/dist/jquery.min.js"></script>
+      <script type="text/javascript" src="/bower_components/Materialize/dist/js/materialize.min.js"></script>
+      <script type="text/javascript" src="/bower_components/angular/angular.min.js"></script>
+      <script type="text/javascript" src="/bower_components/angular-animate/angular-animate.min.js"></script>
+      <script type="text/javascript" src="/bower_components/angular-ui-router/release/angular-ui-router.min.js"></script>
+
+      <script type="text/javascript" src="/js/tictactoe.service.js"></script>
+      <script type="text/javascript" src="/js/data.service.js"></script>
+      <script type="text/javascript" src="/js/config.js"></script>
+      <script type="text/javascript" src="/js/register.controller.js"></script>
+      <script type="text/javascript" src="/js/login.controller.js"></script>
+      <script type="text/javascript" src="/js/player.controller.js"></script>
+      <script type="text/javascript" src="/js/leaderboard.controller.js"></script>
+      <script type="text/javascript" src="/js/app.js"></script>
+     
+      <script type="text/javascript" src="/js/game.controller.js"></script>
+
+    </body>
+  </html>
