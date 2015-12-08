@@ -4,24 +4,25 @@
  * Module dependencies.
  */
 module.exports = function(app, db) {
-	
-	app.get('/api/heartbeat',function(req, res) {
-		console.log(db);
-		res.send('heartbeat');
-	});
 
-	app.post('/api/login',function(req, res) {
-		console.log(req.body);
-		res.send('login');
-	});
+    var controller = require('./controller')(db);
 
-	app.post('/api/logout',function(req, res) {
-		console.log(req.body);
-		res.send('logout');
-	});
+    app.get('/api/heartbeat', function(req, res) {
+        res.send('heartbeat');
+    });
 
-	app.post('/api/register',function(req, res) {
-		console.log(req.body);
-		res.send('register');
-	});
+    app.post('/api/login', function(req, res) {
+        var msg = controller.login();
+        res.send(msg);
+    });
+
+    app.post('/api/logout', function(req, res) {
+        console.log(req.body);
+        res.send('logout');
+    });
+
+    app.post('/api/register', function(req, res) {
+        console.log(req.body);
+        res.send('register');
+    });
 };

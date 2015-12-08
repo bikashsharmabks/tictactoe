@@ -11,31 +11,31 @@ function RegisterController(dataService, $state, $timeout) {
 
     function register() {
 
-    	if (vm.userName.length === 0) {
-    		vm.message = 'User name cannot be blank';
-    		return;
-    	};
+        if (vm.userName.length === 0) {
+            vm.message = 'User name cannot be blank';
+            return;
+        };
 
-    	if (vm.password.length <= 8) {
-    		vm.message = 'password cannot be less than 8 character';
-    		return;
-    	};
+        if (vm.password.length <= 8) {
+            vm.message = 'password cannot be less than 8 character';
+            return;
+        };
 
-    	if (vm.password != vm.confirmPassword) {
-    		vm.message = 'password doesnt match';
-    		return;
-    	};
+        if (vm.password != vm.confirmPassword) {
+            vm.message = 'password doesnt match';
+            return;
+        };
 
-    	vm.message = '';
-    	dataService.register(vm).then(function(data) {
-    		
-    		vm.message = vm.userName + ' you registered';
-    		$timeout(function() {
-    			$state.go('login');
-    		}, 1000);
+        vm.message = '';
+        dataService.register(vm).then(function(data) {
 
-    	}).catch(function(error) {
-    		vm.message = error;
-    	});
+            vm.message = vm.userName + ' you registered';
+            $timeout(function() {
+                $state.go('login');
+            }, 1000);
+
+        }).catch(function(error) {
+            vm.message = error;
+        });
     }
 }

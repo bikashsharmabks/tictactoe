@@ -1,4 +1,3 @@
-
 dataService.$inject = ['$http'];
 
 function dataService($http) {

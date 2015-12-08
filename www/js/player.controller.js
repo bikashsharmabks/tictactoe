@@ -8,11 +8,11 @@ function PlayerController(dataService, $state) {
 
     function logout() {
         dataService.logout(vm)
-        .then(function(data) {
-            $state.go('login');
-        })
-        .catch(function(error) {
+            .then(function(data) {
+                $state.go('login');
+            })
+            .catch(function(error) {
 
-        });
+            });
     }
 }

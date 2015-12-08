@@ -10,22 +10,22 @@ function LoginController(dataService, $state) {
 
     function start() {
 
-    	if (vm.userName.length === 0) {
-    		vm.message = 'User name cannot be blank';
-    		return;
-    	};
+        if (vm.userName.length === 0) {
+            vm.message = 'User name cannot be blank';
+            return;
+        };
 
-    	if (vm.password.length === 0) {
-    		vm.message = 'password cannot be blank';
-    		return;
-    	};
+        if (vm.password.length === 0) {
+            vm.message = 'password cannot be blank';
+            return;
+        };
 
-    	vm.message = '';
+        vm.message = '';
 
-    	dataService.login(vm).then(function(data) {
-    		$state.go('players');
-    	}).catch(function(error) {
-    		vm.message = error;
-    	});
+        dataService.login(vm).then(function(data) {
+            $state.go('players');
+        }).catch(function(error) {
+            vm.message = error;
+        });
     }
 }

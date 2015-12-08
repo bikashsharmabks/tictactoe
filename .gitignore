@@ -27,3 +27,6 @@ build/Release
 node_modules
 
 bower_components
+
+#db file for neddb
+*.db

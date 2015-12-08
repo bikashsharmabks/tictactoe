@@ -4,7 +4,7 @@
  * Module dependencies.
  */
 var config = require('./config/config'),
-	mongoose = require('mongoose');
+    Datastore = require('nedb');
 
 /**
  * Main application entry file.
@@ -12,7 +12,12 @@ var config = require('./config/config'),
  */
 
 // Bootstrap db connection
-var db = mongoose.connect(config.db);
+var db = {};
+db.users = new Datastore(config.db.userdb);
+db.games = new Datastore(config.db.gamedb);
+// You need to load each database (here we do it asynchronously)
+db.users.loadDatabase();
+db.games.loadDatabase();
 
 // Init the express application
 var app = require('./config/express')(db);
